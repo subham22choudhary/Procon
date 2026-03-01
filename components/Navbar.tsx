@@ -11,23 +11,6 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 bg-white shadow-md">
-            {/* Top Trust Bar */}
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-2">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-wrap justify-center sm:justify-between items-center text-xs sm:text-sm gap-2">
-                        <div className="flex items-center gap-4">
-                            <span className="flex items-center gap-1">🔒 Secure</span>
-                            <span className="flex items-center gap-1">✅ Verified Experts</span>
-                            <span className="hidden sm:flex items-center gap-1">💳 Escrow Payments</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="hidden md:inline">📧 support@inteligo.com</span>
-                            <span className="hidden md:inline">|</span>
-                            <span>📞 +91-XXXXXXXXXX</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             {/* Main Header */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,6 +36,26 @@ export default function Header() {
                         </Link>
                         <Link href="/comdet" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
                             Company Details
+                        </Link>
+
+                        <Link href="/admin/dashboard" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+                            Admin Dashboard
+                        </Link>
+
+                        <Link href="/pro/dashboard" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+                            Professional Dashboard
+                        </Link>
+
+                        <Link href="/pro/registered" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+                            Professional Registration
+                        </Link>
+
+                        {/* <Link href="/profesionals-collection/[profession]" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+                            Professional Registration
+                        </Link> */}
+
+                        <Link href="/user/dashboard" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+                            User Dashboard
                         </Link>
                     </nav>
 
