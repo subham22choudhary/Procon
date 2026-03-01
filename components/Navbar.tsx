@@ -48,17 +48,11 @@ export default function Header() {
                         <Link href="/" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
                             Home
                         </Link>
-                        <Link href="/about" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
-                            About Us
+                        <Link href="/legal" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+                            Legal
                         </Link>
-                        <Link href="/how-it-works" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
-                            How It Works
-                        </Link>
-                        <Link href="/pricing" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
-                            Pricing
-                        </Link>
-                        <Link href="/faq" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
-                            FAQ
+                        <Link href="/comdet" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+                            Company Details
                         </Link>
                     </nav>
 
@@ -147,23 +141,14 @@ export default function Header() {
                 {/* Mobile Menu */}
                 {mobileMenuOpen && (
                     <div className="lg:hidden border-t border-gray-200 py-4 space-y-2">
-                        <Link href="/" className="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-colors font-semibold">
+                        <Link href="/" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
                             Home
                         </Link>
-                        <Link href="/about" className="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-colors font-semibold">
-                            About Us
+                        <Link href="/legal" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+                            Legal
                         </Link>
-                        <Link href="/how-it-works" className="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-colors font-semibold">
-                            How It Works
-                        </Link>
-                        <Link href="/pricing" className="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-colors font-semibold">
-                            Pricing
-                        </Link>
-                        <Link href="/contact-us" className="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-colors font-semibold">
-                            Contact Us
-                        </Link>
-                        <Link href="/faq" className="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-colors font-semibold">
-                            FAQ
+                        <Link href="/comdet" className="text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+                            Company Details
                         </Link>
 
                         {!isLoggedIn ? (
