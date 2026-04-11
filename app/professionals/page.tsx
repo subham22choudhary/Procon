@@ -1,7 +1,8 @@
 import { createClient } from '@/lib/supabase/server'
+import BookingForm from '@/components/BookingForm'
 
 export default async function ProfessionalsPage() {
-    const supabase = await createClient()   // ← add await here
+    const supabase = await createClient()
 
     const { data: professionals, error } = await supabase
         .from('professionals')
@@ -11,10 +12,20 @@ export default async function ProfessionalsPage() {
     if (error) return <div>Error: {error.message}</div>
 
     return (
-        <ul>
+        <div>
+            <h1>Available Professionals</h1>
             {professionals.map(p => (
-                <li key={p.id}>{p.name} — {p.category} — ${p.price}</li>
+                <div key={p.id} style={{ border: '1px solid #ccc', margin: '16px', padding: '16px' }}>
+                    <h2>{p.name}</h2>
+                    <p>Category: {p.category}</p>
+                    <p>Price: ${p.price}</p>
+                    <p>Experience: {p.experience}</p>
+                    <p>{p.bio}</p>
+
+                    {/* Booking form for each professional */}
+                    <BookingForm professionalId={p.id} />
+                </div>
             ))}
-        </ul>
+        </div>
     )
 }

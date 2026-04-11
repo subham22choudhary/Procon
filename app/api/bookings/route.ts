@@ -11,3 +11,18 @@ export async function GET() {
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })
     return NextResponse.json(data)
 }
+
+export async function PATCH(request: Request) {
+    const supabase = await createClient()
+    const body = await request.json()
+
+    const { data, error } = await supabase
+        .from('bookings')
+        .update({ status: body.status })
+        .eq('id', body.id)
+        .select()
+        .single()
+
+    if (error) return NextResponse.json({ error: error.message }, { status: 400 })
+    return NextResponse.json(data)
+}
