@@ -115,14 +115,14 @@ export default function ContactSection() {
         {
             icon: <MailIcon />,
             label: "EMAIL",
-            value: "hello@company.com",
+            value: "hello@inteliglo.com",
             iconBg: "rgba(161,122,0,0.15)",
             iconColor: "lab(91.3413% 4.51836 106.171)",
         },
         {
             icon: <PhoneIcon />,
             label: "PHONE",
-            value: "+1 (234) 567-890",
+            value: "+91 821-021-9654",
             iconBg: "rgba(17,177,14,0.12)",
             iconColor: "lab(63.0386% -59.1384 59.9589)",
         },
