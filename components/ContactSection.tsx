@@ -188,7 +188,6 @@ export default function ContactSection() {
         }
 
         .contact-section {
-          font-family: 'DM Sans', sans-serif;
           background-color: #0a0a0a;
           color: #fff;
           min-height: 100vh;
@@ -214,7 +213,6 @@ export default function ContactSection() {
         }
 
         .contact-eyebrow-text {
-          font-family: 'DM Sans', sans-serif;
           font-size: 11px;
           font-weight: 500;
           letter-spacing: 0.18em;
@@ -223,7 +221,6 @@ export default function ContactSection() {
         }
 
         .contact-heading {
-          font-family: 'Syne', sans-serif;
           font-size: clamp(2.4rem, 6vw, 3.8rem);
           font-weight: 800;
           line-height: 1.1;
@@ -343,7 +340,6 @@ export default function ContactSection() {
           border-radius: 10px;
           padding: 13px 16px;
           color: #fff;
-          font-family: 'DM Sans', sans-serif;
           font-size: 14px;
           transition: border-color 0.2s, background 0.2s;
           outline: none;
@@ -383,7 +379,6 @@ export default function ContactSection() {
           color: #000;
           border: none;
           border-radius: 50px;
-          font-family: 'DM Sans', sans-serif;
           font-size: 15px;
           font-weight: 600;
           cursor: pointer;
@@ -410,7 +405,6 @@ export default function ContactSection() {
           color: #000;
           border: none;
           border-radius: 50px;
-          font-family: 'DM Sans', sans-serif;
           font-size: 15px;
           font-weight: 600;
           cursor: pointer;
@@ -611,9 +605,9 @@ export default function ContactSection() {
                                 {status === "loading" ? "Sending…" : "Send Message"}
                                 {status !== "loading" && <SendIcon />}
                             </button>
-                            <button className="btn-clear" onClick={handleClear}>
+                            {/* <button className="btn-clear" onClick={handleClear}>
                                 Clear Form
-                            </button>
+                            </button> */}
                         </div>
 
                         {/* Feedback */}
@@ -631,13 +625,13 @@ export default function ContactSection() {
                 {/* Footer */}
                 <footer className="contact-footer">
                     <p className="contact-response-time">
-                        Average response time: <span>2–4 hours</span> during business hours.
+                        Average response time: <span>24 hours</span> during business hours.
                     </p>
-                    <nav className="contact-footer-links">
+                    {/* <nav className="contact-footer-links">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>
                         <a href="#">Follow Us</a>
-                    </nav>
+                    </nav> */}
                 </footer>
             </section>
         </>
