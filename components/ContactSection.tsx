@@ -129,7 +129,7 @@ export default function ContactSection() {
         {
             icon: <MapPinIcon />,
             label: "LOCATION",
-            value: "San Francisco, CA",
+            value: "India",
             iconBg: "rgba(17,177,14,0.12)",
             iconColor: "lab(63.0386% -59.1384 59.9589)",
         },
