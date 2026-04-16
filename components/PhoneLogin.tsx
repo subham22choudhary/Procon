@@ -283,7 +283,7 @@ export default function PhoneLogin() {
                                 {otp.map((d, i) => (
                                     <input
                                         key={i}
-                                        ref={(el) => (inputsRef.current[i] = el)}
+                                        ref={(el) => { inputsRef.current[i] = el; }}
                                         value={d}
                                         onChange={(e) => handleOtpChange(i, e.target.value)}
                                         onKeyDown={(e) => handleOtpKeyDown(i, e)}
