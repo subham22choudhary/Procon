@@ -54,6 +54,14 @@ export default async function BookingsPage() {
                     gap: 20px;
                 }
 
+                .grid {
+                    max-width: 1100px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 24px;
+                }
+
                 .card {
                     padding: 20px;
                     border-radius: 18px;
@@ -148,7 +156,7 @@ export default async function BookingsPage() {
                     <p className="empty">No bookings yet.</p>
                 )}
 
-                <div className="list">
+                <div className="grid">
                     {bookings.map((b, i) => (
                         <div
                             key={b.id}
