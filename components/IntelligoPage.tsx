@@ -385,7 +385,7 @@ export default function IntelligoPage() {
             </h1>
 
             <p className="hero-sub">
-              From finance and legal to career and personal decisions—connect with trusted professionals and solve your problems faster.
+              From finance and legal to career and personal decisions. Connect with trusted professionals and solve your problems faster.
             </p>
 
             <div className="hero-trust">
