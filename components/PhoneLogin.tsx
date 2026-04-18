@@ -106,7 +106,7 @@ export default function PhoneLogin() {
 
         try {
             await confirmRef.current!.confirm(code);
-            router.push("/");               // ← success → homepage
+            router.push("/professionals");               // ← success → homepage
         } catch {
             setError("Invalid OTP. Please try again.");
             setOtp(["", "", "", "", "", ""]);

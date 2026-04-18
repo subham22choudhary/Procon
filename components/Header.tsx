@@ -452,7 +452,7 @@ export default function Header() {
           {/* Desktop CTA buttons */}
           <div className="hdr-actions">
 
-            <Link href="/professionals" className="hdr-btn-cta">
+            <Link href="/login" className="hdr-btn-cta">
               <div className="hdr-cta-dot" />
               Get started
             </Link>
@@ -510,7 +510,7 @@ export default function Header() {
         </nav>
 
         <div className="hdr-drawer-footer">
-          <Link href="/professionals" className="hdr-drawer-cta" onClick={() => setMenuOpen(false)}>
+          <Link href="/login" className="hdr-drawer-cta" onClick={() => setMenuOpen(false)}>
             Get started
           </Link>
 
