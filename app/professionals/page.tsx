@@ -112,6 +112,85 @@ export default async function ProfessionalsPage() {
                     padding-top: 10px;
                     border-top: 1px solid rgba(255,255,255,0.06);
                 }
+
+                /* Date & Time Dropdown Styling */
+                .booking-wrap input[type="date"],
+                .booking-wrap input[type="time"],
+                .booking-wrap select {
+                    width: 100%;
+                    padding: 10px 12px;
+                    margin-top: 8px;
+                    border-radius: 10px;
+                    background: rgba(255,255,255,0.05);
+                    border: 1px solid rgba(255,255,255,0.08);
+                    color: #ffffff;
+                    font-size: 14px;
+                    outline: none;
+                    transition: all 0.2s ease;
+                    backdrop-filter: blur(10px);
+                }
+
+                .booking-wrap input[type="date"]:focus,
+                .booking-wrap input[type="time"]:focus,
+                .booking-wrap select:focus {
+                    border-color: oklch(0.63 0.22 142.49);
+                    box-shadow: 0 0 0 1px oklch(0.63 0.22 142.49 / 0.4);
+                }
+
+                /* Calendar & time icon tweak (for better visibility) */
+                .booking-wrap input[type="date"]::-webkit-calendar-picker-indicator,
+                .booking-wrap input[type="time"]::-webkit-calendar-picker-indicator {
+                    filter: invert(1);
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+
+                /* Dropdown options (limited styling support) */
+                .booking-wrap select option {
+                    background: #0a0a0a;
+                    color: white;
+                }
+
+
+                /* Book Now CTA Button */
+                .booking-wrap .cta-book {
+                    width: 100%;
+                    margin-top: 16px;
+                    padding: 12px 16px;
+                    border-radius: 12px;
+                    border: none;
+                    cursor: pointer;
+
+                    /* Yellow → Green gradient */
+                    background: linear-gradient(135deg, #facc15, oklch(0.63 0.22 142.49));
+                    
+                    color: #0a0a0a;
+                    font-weight: 600;
+                    font-size: 15px;
+                    letter-spacing: 0.3px;
+
+                    transition: all 0.25s ease;
+                }
+
+                /* Hover effect */
+                .booking-wrap .cta-book:hover {
+                    transform: translateY(-1px);
+                    box-shadow: 0 6px 18px rgba(250, 204, 21, 0.25);
+                    filter: brightness(1.05);
+                }
+
+                /* Active (click) */
+                .booking-wrap .cta-book:active {
+                    transform: scale(0.98);
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+                }
+
+                /* Disabled state */
+                .booking-wrap .cta-book:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                    box-shadow: none;
+                }
             `}</style>
 
             <div className="page-wrap">
@@ -143,7 +222,11 @@ export default async function ProfessionalsPage() {
                             <p className="bio">{p.bio}</p>
 
                             <div className="booking-wrap">
-                                <BookingForm professionalId={p.id} />
+                                <BookingForm
+                                    professionalId={p.id}
+                                    price={p.price}
+                                    professionalName={p.name}
+                                />
                             </div>
                         </div>
                     ))}
