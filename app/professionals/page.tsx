@@ -105,6 +105,7 @@ export default async function ProfessionalsPage() {
                     font-size: 14px;
                     color: #d0d0d0;
                     line-height: 1.5;
+                    min-height: 2.7rem;
                 }
 
                 .booking-wrap {
