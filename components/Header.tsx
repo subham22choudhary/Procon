@@ -24,6 +24,8 @@ const CloseIcon = () => (
 // ── Nav links config ─────────────────────────────────────────────────────────
 const NAV_LINKS = [
   { label: "Home", href: "/" },
+  { label: "Register", href: "/register" },
+  { label: "Prof Admin", href: "/admin/professionals" },
   { label: "Professionals", href: "/professionals" },
   { label: "Bookings", href: "/bookings" },
   { label: "Contact", href: "/contact" },
