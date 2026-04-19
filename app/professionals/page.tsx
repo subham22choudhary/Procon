@@ -212,7 +212,7 @@ export default async function ProfessionalsPage() {
                             </p>
 
                             <p className="meta">
-                                Price: <span className="price">${p.price}</span>
+                                Price: <span className="price">{"\u20B9"}{p.price}</span>
                             </p>
 
                             <p className="meta">
