@@ -27,6 +27,7 @@ const NAV_LINKS = [
   { label: "Register", href: "/register" },
   { label: "Prof Admin", href: "/admin/professionals" },
   { label: "Professionals", href: "/professionals" },
+  { label: "Users", href: "/users" },
   { label: "Bookings", href: "/bookings" },
   { label: "Contact", href: "/contact" },
 ];
