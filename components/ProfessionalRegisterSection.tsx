@@ -130,7 +130,6 @@ export default function ProfessionalRegisterSection() {
         setForm(EMPTY);
         setStatus("idle");
         setErrorMsg("");
-        setWordWarning("");
     };
 
 
