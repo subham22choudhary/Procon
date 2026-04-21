@@ -32,7 +32,7 @@ interface Booking {
         name: string;
         category: string;
         experience: string;
-    } | null;
+    }[] | null;
 }
 
 // ── Status helpers ─────────────────────────────────────────────────────────────
@@ -103,7 +103,14 @@ export default function UserProfilePage() {
                 .eq("user_firebase_uid", user.uid)
                 .order("created_at", { ascending: false });
 
-            setBookings(bks || []);
+            setBookings(
+                (bks || []).map((b) => ({
+                    ...b,
+                    professionals: Array.isArray(b.professionals)
+                        ? b.professionals[0] ?? null
+                        : b.professionals,
+                }))
+            );
             setLoading(false);
         });
         return () => unsub();
