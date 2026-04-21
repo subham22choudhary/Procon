@@ -32,7 +32,7 @@ interface Booking {
         name: string;
         category: string;
         experience: string;
-    }[] | null;
+    } | null;
 }
 
 // ── Status helpers ─────────────────────────────────────────────────────────────
@@ -109,7 +109,7 @@ export default function UserProfilePage() {
                     professionals: Array.isArray(b.professionals)
                         ? b.professionals[0] ?? null
                         : b.professionals,
-                }))
+                })) as Booking[]
             );
             setLoading(false);
         });
