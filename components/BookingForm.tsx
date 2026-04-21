@@ -1,6 +1,8 @@
 'use client'
 import { createClient } from '@/lib/supabase/client'
 import { useState } from 'react'
+import { auth } from "@/lib/firebase";
+
 
 declare global {
     interface Window { Razorpay: any }
@@ -50,6 +52,7 @@ export default function BookingForm({
                 time_slot: timeSlot,
                 status: 'pending',
                 amount: price,
+                user_firebase_uid: auth.currentUser?.uid ?? null,  // ← add this
             })
             .select()
             .single()

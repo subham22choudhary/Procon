@@ -55,12 +55,15 @@ const NAV_BY_ROLE: Record<string, { label: string; href: string }[]> = {
     { label: "Register", href: "/register" },
     { label: "Professionals", href: "/professionals" },
     { label: "Contact", href: "/contact" },
+    { label: "My Profile", href: "/dashboard" },
+
   ],
   user: [
     { label: "Home", href: "/" },
     { label: "Professionals", href: "/professionals" },
     { label: "Users", href: "/users" },
     { label: "Contact", href: "/contact" },
+    { label: "My Profile", href: "/my-profile" },
   ],
   guest: [
     { label: "Home", href: "/" },
