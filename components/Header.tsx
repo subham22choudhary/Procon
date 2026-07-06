@@ -414,11 +414,11 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" className="hdr-logo" onClick={() => setMenuOpen(false)}>
-            <div className="hdr-mark">
+            {/* <div className="hdr-mark">
               <div className="hdr-mark-ring" />
               <div className="hdr-mark-dot" />
               <div className="hdr-mark-corner" />
-            </div>
+            </div> */}
             <span className="hdr-brand">
               Inteli<span className="b-green">g</span><span className="b-yellow">l</span>o
             </span>
